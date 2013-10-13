@@ -61,7 +61,6 @@ class CodeGen:
 		while inLine:
 			startPos=line.find('<%')
 			endPos=line.find('%>')
-
 			
 			if startPos>=0:
 				if endPos<0:
@@ -70,7 +69,8 @@ class CodeGen:
 				self.appendO(line[:startPos],False)
 			
 				if endPos>=0:
-					hasOutput=hasOutput or self.handleCommand(line[startPos+2:endPos])
+					thisOutput=self.handleCommand(line[startPos+2:endPos])
+					hasOutput=hasOutput or thisOutput
 					line=line[endPos+2:]	
 
 			else:
