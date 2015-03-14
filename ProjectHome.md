@@ -1,0 +1,1 @@
+ssptl (Super Simple Python Templating Language), is just that, a < 300 line single file templating language with a decent feature set and sane language syntax.
